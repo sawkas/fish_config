@@ -12,6 +12,4 @@ if [ -f $HOME/.config/fish/env/index.fish ]
   source $HOME/.config/fish/env/index.fish
 end
 
-fish_add_path "/usr/local/sbin"
-
-rvm default && rvm use
+set -gx SSL_CERT_FILE "/usr/local/etc/openssl/cert.pem"
