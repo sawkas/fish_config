@@ -12,4 +12,5 @@ if [ -f $HOME/.config/fish/env/index.fish ]
   source $HOME/.config/fish/env/index.fish
 end
 
-set -gx SSL_CERT_FILE "/usr/local/etc/openssl/cert.pem"
+# WARNING => PLEASE DON'T FORGET ABOUT IT
+set -gx SSL_CERT_FILE "/private/etc/ssl/cert.pem"
