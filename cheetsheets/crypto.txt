@@ -1,0 +1,16 @@
+#etherium
+geth --dev --rpc --rpcapi "eth,personal"
+geth attach
+
+#bitcoin
+bitcoind -regtest -server -rpcuser=test -rpcpassword=test123 -datadir=~/crypto/bitcoin/regtest/A/
+bitcoin-cli -regtest -rpcuser=test -rpcpassword=test123 generate 101
+
+#litecoin
+./src/litecoind -regtest -server -rpcuser=test -rpcpassword=test123 -datadir=~/crypto/litecoin/regtest/A/
+./src/litecoin-cli -regtest -rpcuser=test -rpcpassword=test123 generate 101
+
+#dash
+./src/dashd -regtest -server -rpcuser=test -rpcpassword=test123 -rpcport=9998 -rpcdir=~/crypto/dash/regtest/A/
+./src/dash-cli -regtest -rpcuser=test -rpcpassword=test123 -rpcport=9998 generate 101
+

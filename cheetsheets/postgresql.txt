@@ -1,0 +1,13 @@
+# drop rails migration
+ALTER TABLE client_manager_relations DROP COLUMN duration;
+DELETE FROM schema_migrations WHERE version='20190926142758';
+
+# set up postgis
+psql -d db_development1 -f $(brew --prefix)/share/postgis/spatial_ref_sys.sql
+
+# set up user & db
+sudo -u postgres createuser app
+sudo -u postgres createdb production
+sudo -u postgres psql
+alter user app with encrypted password 'password';
+grant all privileges on database production to app;

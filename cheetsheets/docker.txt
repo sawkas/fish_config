@@ -1,0 +1,3 @@
+docker ps | grep rails_console
+docker exec -it 5495bfb5977b sh
+docker exec -it $(docker ps | grep rails_console | awk '{print $1}') sh

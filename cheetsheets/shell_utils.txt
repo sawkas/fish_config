@@ -1,0 +1,11 @@
+#find line in file
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+#scroll from end
+less +G '/path/to/somewhere/'
+
+#systemctl
+vi /etc/systemd/system/puma.service
+systemctl start puma.service
+systemctl enable puma.service
+systemctl status puma.service

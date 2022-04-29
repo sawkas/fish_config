@@ -1,0 +1,3 @@
+kubectl get pods
+kubectl config use-context staging
+kubectl exec -it sww-sw-club-uat-7b59875c7c-msk57 -- bash
