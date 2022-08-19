@@ -6,4 +6,4 @@ set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
 # mac os M1 issue
-set -gx NODE_OPTIONS "--openssl-legacy-provider"
+# set -gx NODE_OPTIONS "--openssl-legacy-provider"
