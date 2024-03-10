@@ -9,3 +9,5 @@ vi /etc/systemd/system/puma.service
 systemctl start puma.service
 systemctl enable puma.service
 systemctl status puma.service
+
+journalctl -u puma.service

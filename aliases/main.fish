@@ -10,13 +10,16 @@ alias reset_test_db="RAILS_ENV=test rake db:drop db:create db:migrate"
 # alias elasticsearch_recreate_indexes="rake environment elasticsearch:import:all FORCE=y"
 
 ## js
-alias eslint_fix="npx eslint --fix"
+alias js_jest="npx jest"
+alias js_cypress="npx cypress run --browser chrome --spec"
 
 ## Git
+alias git_main="git fetch && git checkout main && git pull"
 alias git_master="git fetch && git checkout master && git pull"
 alias git_develop="git fetch && git checkout develop && git pull"
 alias git_hotfix="git status && git commit --amend --no-edit && git push --force"
-alias git_delete_local_branches="git checkout master && git branch | grep -v '^*' | xargs git branch -D"
+alias git_delete_local_branches="git checkout main && git branch | grep -v '^*' | xargs git branch -D"
+alias git_reset="git reset --hard HEAD"
 
 ## dirs
 alias fish_dir="cd ~/.config/fish"

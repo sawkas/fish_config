@@ -14,3 +14,6 @@ end
 
 # WARNING => PLEASE DON'T FORGET ABOUT IT
 set -gx SSL_CERT_FILE "/private/etc/ssl/cert.pem"
+set -gx RUBY_CONFIGURE_OPTS "--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+set -gx OBJC_DISABLE_INITIALIZE_FORK_SAFETY "YES"
